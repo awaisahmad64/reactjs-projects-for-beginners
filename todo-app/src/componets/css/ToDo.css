@@ -12,9 +12,15 @@
 .item {
   padding: 1rem;
   background: rgb(168, 201, 247);
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 4px;
+   margin-bottom: 0.5rem !important;
 }
-P {
-  margin-bottom: 0.5rem !important;
+.cursor{
+  cursor: pointer;
+}
+p{
+  margin:0;
 }

@@ -3,8 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ShowData(props) {
     return (
-         <p className="item">{props.task}</p>
-
+        <div className='item'> 
+         <p>{props.task}</p><p> <i class="fas fa-trash-alt text-danger cursor"></i></p>
+         </div>
     );
 }
 
