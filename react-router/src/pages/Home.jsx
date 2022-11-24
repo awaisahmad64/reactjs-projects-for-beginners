@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>This is your Home page</div>
+    <div className='container px-4 mx-auto'>This is your Home page</div>
   )
 }
 

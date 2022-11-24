@@ -11,6 +11,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <div className='container'>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact-us" element={<Contactus />}></Route>
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 
