@@ -1,0 +1,7 @@
+.d-flex{
+    display: flex;
+}
+.mx{
+    margin-left: 10px;
+    margin-right: 10px;
+}
