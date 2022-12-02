@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React js with install locally</title>
+    <!-- start Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="react-core/balel.js"></script>
+    <script src="react-core/react@18.2.0.development.js"></script>
+    <script src="react-core/react-dom@18.2.0-react-dom-development.js"></script>
+    <!-- End Load React. -->
+  </head>
+  <body>
+    <!-- ... other HTML ... -->
+    <div id="root"></div>
+
+    <!-- Load our React component. -->
+    <script type="text/babel">
+      class LikeButton extends React.Component {
+        render() {
+          return <h1>Hello Programmers!</h1>;
+        }
+      }
+      ReactDOM.render(<LikeButton />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
