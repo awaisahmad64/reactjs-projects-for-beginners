@@ -18,11 +18,10 @@ function ToDo() {
   };
   const deleteItem = (deleteId) => {
     console.log('delete');
-    let finalData = data.filter((currentItem, index)=>{
-       return index !== deleteId;
-    })
+    let finalData = data.filter((currentItem, index) => {
+      return index !== deleteId;
+    });
     setData(finalData);
-
   };
   return (
     <div className="bg-lightblue">
@@ -30,6 +29,7 @@ function ToDo() {
         <div className="row">
           <div className="col-md-4 mx-auto">
             <form className="pt-5 pb-2" onSubmit={submitHandler}>
+              <p className="text-white">2 Todo left of 5</p>
               <div className="d-flex">
                 <input
                   className="form-control rounded-0 mr__2"
@@ -40,6 +40,7 @@ function ToDo() {
                   add
                 </Button>
               </div>
+              <Button className='mt-1' variant='outline-danger' style={{width:"100%"}}>Delete All</Button>
             </form>
             <div>
               {data.map((value, index) => {
