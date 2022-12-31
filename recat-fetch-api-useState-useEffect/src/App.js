@@ -1,19 +1,10 @@
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { useEffect, useState } from 'react';
+import useFetch from './customhooks/useFetch';
 
 function App() {
-  const [data, setData] = useState([]);
-  function displayData() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((result) => result.json())
-      .then((data) => {
-        setData(data);
-      });
-  }
-  useEffect(() => {}, []);
-
+  const data = useFetch('https://jsonplaceholder.typicode.com/users');
   const element = data.map((element) => (
     <tr key={element.id}>
       <td>{element.id}</td>
@@ -52,9 +43,8 @@ function App() {
             </thead>
             <tbody>{element}</tbody>
           </table>
-          <Button variant="primary" onClick={displayData}>
-            Display Data
-          </Button>
+          {/* onClick={displayData} */}
+          <Button variant="primary">Display Data</Button>
         </div>
       </div>
     </div>
