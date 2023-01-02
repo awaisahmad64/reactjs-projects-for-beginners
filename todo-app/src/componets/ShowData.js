@@ -8,7 +8,7 @@ function ShowData(props) {
         <p>{props.task}</p>
         <p>
           {' '}
-          <input type="checkbox" />{' '}
+          <input type="checkbox" checked={props.checked} />{' '}
           <i
             onClick={() => {
               props.onSelect(props.id);

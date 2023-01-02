@@ -5,14 +5,18 @@ import './css/ToDo.css';
 import ShowData from './ShowData';
 
 function ToDo() {
-  const [task, setTask] = useState('add Task');
+  const [task, setTask] = useState({
+    id: 1,
+    name: 'React Last Project',
+    completed: true,
+  });
   const [data, setData] = useState([]);
   const onChangeHandler = (e) => {
     setTask(e.target.value);
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    const newData = task;
+    const newData = task.name;
     setData([...data, newData]);
     setTask('');
   };
@@ -33,14 +37,20 @@ function ToDo() {
               <div className="d-flex">
                 <input
                   className="form-control rounded-0 mr__2"
-                  value={task}
+                  value={task.name}
                   onChange={onChangeHandler}
                 ></input>
                 <Button type="submit" variant="primary" className="btn__bg">
                   add
                 </Button>
               </div>
-              <Button className='mt-1' variant='outline-danger' style={{width:"100%"}}>Delete All</Button>
+              <Button
+                className="mt-1"
+                variant="outline-danger"
+                style={{ width: '100%' }}
+              >
+                Delete All
+              </Button>
             </form>
             <div>
               {data.map((value, index) => {
@@ -49,6 +59,7 @@ function ToDo() {
                     key={index}
                     id={index}
                     task={value}
+                    checked={task.completed}
                     onSelect={deleteItem}
                   />
                 );
