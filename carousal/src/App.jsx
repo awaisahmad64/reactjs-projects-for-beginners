@@ -24,6 +24,7 @@ function App() {
         <div className="right-arrow" onClick={nextSlide}>
           ⮕
         </div>
+        <div className='carousal-count'>{current +1}/{images.length}</div>
         {images.map(
           (image, index) =>
             current === index && (
