@@ -9,8 +9,12 @@ function App() {
     'https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     'https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
   ];
-  const prevSlide = () => {};
-  const nextSlide = () => {};
+  const prevSlide = () => {
+    setCurrent(current === 0 ? images.length - 1 : current - 1);
+  };
+  const nextSlide = () => {
+    setCurrent(current === images.length - 1 ? 0 : current + 1);
+  };
   return (
     <>
       <div className="slider">
@@ -20,9 +24,14 @@ function App() {
         <div className="right-arrow" onClick={nextSlide}>
           ⮕
         </div>
-        <div className='slide'>
-          <img src={images[0]} />
-        </div>
+        {images.map(
+          (image, index) =>
+            current === index && (
+              <div key={image} className="slide">
+                <img src={image} alt="images" />
+              </div>
+            )
+        )}
       </div>
     </>
   );
