@@ -26,13 +26,14 @@ function App() {
         <div className="carousal-count">
           {current + 1}/{images.length}
         </div>
-        {images.map(
-          (image, index) =>
-            current === index && (
-              <div key={image} className="slide">
-                <img src={image} alt="images" />
-              </div>
-            )
+        { 
+        images.map(
+          (image,index)=> 
+          current === index &&(
+            <div key={image} className='slide'>
+              <img src={image} alt="image" />
+            </div>
+          )
         )}
       </div>
     </>
