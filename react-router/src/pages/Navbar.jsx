@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
-
+import { BrowserRouter, NavLink } from 'react-router-dom';
+import '../App.css'
 function Navbar() {
   return (
-    <div className="container flex flex-wrap justify-between items-center mx-auto px-0 min-screen w-full relative bg-teal-500 ">
+    <div className="container mx-auto px-0  w-full relative bg-teal-500 ">
       <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <svg
@@ -32,18 +32,25 @@ function Navbar() {
 
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div class="text-sm lg:flex-grow">
-            <Link
+            <NavLink
               to="/"
               class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
+              to="/categories"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+            >
+              
+              Categories
+            </NavLink>
+            <NavLink
               to="Contact-us"
               class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
             >
               Contact Us
-            </Link>
+            </NavLink>
           </div>
           <div>
             <a

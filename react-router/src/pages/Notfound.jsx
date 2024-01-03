@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import '../App.css'
 
 function Notfound() {
-  return (
-    <div>404 Page Not found</div>
-  )
+  return <h1 className="text-center my-44">404 Page Not found</h1>;
 }
 
-export default Notfound
+export default Notfound;
