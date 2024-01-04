@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Navbar from './pages/Navbar';
 import Categories from './pages/Categories';
 import Footer from './pages/footer';
+import Web from './pages/Web';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +19,9 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path='/categories' element={<Categories />}></Route>
+            <Route path='/categories' element={<Categories />}>
+              <Route path='web' element={<Web /> }></Route>
+            </Route>
             <Route path="/contact-us" element={<Contactus />}></Route>
             <Route path='*' element={<Notfound />}></Route>
           </Routes>
